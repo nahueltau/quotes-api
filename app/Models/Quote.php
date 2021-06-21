@@ -11,4 +11,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Quote extends Model
 {
     use SoftDeletes, HasFactory;
+
+
+    protected $hidden = [
+        'deleted_at',
+    ];
+    
 }
