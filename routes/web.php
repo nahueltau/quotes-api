@@ -22,6 +22,6 @@ $router->group(['prefix'=>'quotes'], function () use ($router){
     $router->get('/', 'QuoteController@index');
     $router->get('/{id}', 'QuoteController@show');
     $router->post('/', 'QuoteController@store');
-    $router->put('/{id}', 'QuoteController@update');
+    $router->put('/{id}', 'QuoteController@update'); 
     $router->delete('/{id}', 'QuoteController@delete');
 });
