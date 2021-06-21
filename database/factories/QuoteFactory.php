@@ -11,8 +11,11 @@ class QuoteFactory extends Factory
 
     public function definition(): array
     {
-    	return [
-    	    //
+    	return[
+                'author'=>$this->faker->word,
+                'quote'=>$this->faker->paragraph,
+                'book'=>$this->faker->word,
+                'year'=>$this->faker->year
     	];
     }
 }
