@@ -25,3 +25,13 @@ $router->group(['prefix'=>'quotes'], function () use ($router){
     $router->put('/{id}', 'QuoteController@update'); 
     $router->delete('/{id}', 'QuoteController@delete');
 });
+$router->group([
+    'prefix' => 'api/meli'
+], function () use ($router) {
+    $router->get('/webhook', 'WebhookController@index');
+    $router->post('/webhook', 'WebhookController@receive');
+    $router->delete('/webhook/destroy', 'WebhookController@destroyAll');
+    $router->delete('/webhook/{id}', 'WebhookController@destroy');
+    $router->get('/webhook/{user_id}', 'WebhookController@show');
+    
+});

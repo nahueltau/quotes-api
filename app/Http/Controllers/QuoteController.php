@@ -25,7 +25,7 @@ class QuoteController extends Controller
            return $res; 
         }
         return response("Record not found", 404);
-
+ 
     }
     public function store(Request $request){
 
